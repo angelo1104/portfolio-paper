@@ -3,10 +3,10 @@ import {
   Container,
   ContentContainer,
   DateContainer,
-  TextContainer,
   TitleContainer,
 } from "./Home.style";
 import { format } from "date-fns";
+import Introduction from "../Introduction";
 
 function Home() {
   const [currentDate, setCurrentDate] = useState("");
@@ -21,40 +21,7 @@ function Home() {
         <span>{currentDate}</span>
       </DateContainer>
       <ContentContainer>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
-        <h1>hi</h1>
+        <Introduction />
       </ContentContainer>
       <TitleContainer>
         <span>Developer</span>

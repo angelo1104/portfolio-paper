@@ -47,7 +47,3 @@ export const TitleContainer = styled.div`
     writing-mode: vertical-rl;
   }
 `;
-
-export const TextContainer = styled.div`
-  position: relative;
-`;
