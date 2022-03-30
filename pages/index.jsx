@@ -1,11 +1,8 @@
 import Head from 'next/head'
-import styled from "styled-components"
+import Home from '../Components/Home'
 
-const Hi = styled.h1`
-  color: red;
-`
 
-export default function Home() {
+export default function Index() {
   return (
     <div>
       <Head>
@@ -14,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Hi>hi</Hi>
+      <Home/>
     </div>
   )
 }
