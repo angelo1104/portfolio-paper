@@ -5,7 +5,9 @@ import {
   Container,
   FirstName,
   I,
+  Line,
   NameContainer,
+  ScrollWrapper,
   SecondaryAboutContainer,
   SecondName,
   SecondNameContainer,
@@ -14,34 +16,46 @@ import {
 import stampPic from "../../public/stamp.png";
 import Image from "next/image";
 
-function Introduction() {
+function Introduction({
+  last,
+  imgSrc,
+  first,
+  second,
+  alt,
+  children,
+  stamp,
+  capText,
+}) {
   return (
-    <Container>
-      <NameContainer>
-        <FirstName>Tyler</FirstName>
-        <SecondNameContainer>
-          <SecondName>Tony</SecondName>
-          <Image
-            src={stampPic}
-            alt={"stamp"}
-            height={100}
-            width={70}
-            className={"stampImg"}
-            objectFit={"contain"}
-          />
-        </SecondNameContainer>
-      </NameContainer>
+    <ScrollWrapper>
+      <Container>
+        <NameContainer>
+          <FirstName>{first}</FirstName>
+          <SecondNameContainer>
+            <SecondName>{second}</SecondName>
+            {stamp && (
+              <Image
+                src={stampPic}
+                alt={"stamp"}
+                height={100}
+                width={70}
+                className={"stampImg"}
+                objectFit={"contain"}
+              />
+            )}
+          </SecondNameContainer>
+        </NameContainer>
 
-      <AboutContainer>
-        <SecondaryAboutContainer>
-          <I>I</I>
-          <About>
-            am a self-taught developer and UI/UX designer. Based in NYC.
-          </About>
-        </SecondaryAboutContainer>
-        <StyledCatto src={"/catto.jpg"} alt={"profile"} height={200} />
-      </AboutContainer>
-    </Container>
+        <AboutContainer>
+          <SecondaryAboutContainer>
+            <I>{capText}</I>
+            <About>{children}</About>
+          </SecondaryAboutContainer>
+          <StyledCatto src={imgSrc} alt={alt} height={200} />
+        </AboutContainer>
+      </Container>
+      {!last && <Line />}
+    </ScrollWrapper>
   );
 }
 

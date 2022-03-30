@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const ScrollWrapper = styled.div`
+  scroll-snap-align: start;
+  height: 100vh;
+`;
+
 export const Container = styled.div`
   padding: 100px 50px;
   display: flex;
@@ -64,8 +69,6 @@ export const About = styled.p`
   font-weight: 400;
   font-size: 20px;
   line-height: 31px;
-  display: flex;
-  align-items: center;
 
   color: #000000;
 `;
@@ -80,4 +83,8 @@ export const StyledCatto = styled.img`
   margin-bottom: 50px;
   height: 300px;
   object-fit: cover;
+`;
+
+export const Line = styled.hr`
+  border-color: rgba(73, 51, 43, 0.6);
 `;
